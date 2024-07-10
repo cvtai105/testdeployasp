@@ -9,35 +9,35 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
-builder.Services.AddW3CLogging(logging =>
-{
-    // Log all W3C fields
-    logging.LoggingFields = W3CLoggingFields.All;
-    logging.AdditionalRequestHeaders.Add("x-forwarded-for");
-    logging.AdditionalRequestHeaders.Add("x-client-ssl-protocol");
-    logging.FileSizeLimit = 5 * 1024 * 1024;
-    logging.RetainedFileCountLimit = 2;
-    logging.FileName = "http-logs.txt";
-    logging.LogDirectory = @"C:\Users\cvtai\OneDrive\Desktop\ResumeManagementSystem\backend\Application";
-    logging.FlushInterval = TimeSpan.FromSeconds(2);
-});
+// builder.Services.AddW3CLogging(logging =>
+// {
+//     // Log all W3C fields
+//     logging.LoggingFields = W3CLoggingFields.All;
+//     logging.AdditionalRequestHeaders.Add("x-forwarded-for");
+//     logging.AdditionalRequestHeaders.Add("x-client-ssl-protocol");
+//     logging.FileSizeLimit = 5 * 1024 * 1024;
+//     logging.RetainedFileCountLimit = 2;
+//     logging.FileName = "http-logs.txt";
+//     logging.LogDirectory = @"C:\Users\cvtai\OneDrive\Desktop\ResumeManagementSystem\backend\Application";
+//     logging.FlushInterval = TimeSpan.FromSeconds(2);
+// });
 
-//swagger
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// //swagger
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
 
-// Cấu hình dịch vụ logging
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
+// // Cấu hình dịch vụ logging
+// builder.Logging.ClearProviders();
+// builder.Logging.AddConsole();
+// builder.Logging.AddDebug();
 
-var _logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .WriteTo.File(path: "info-logs.txt", restrictedToMinimumLevel: LogEventLevel.Information)
-                .WriteTo.File(path: "error-logs.txt", restrictedToMinimumLevel: LogEventLevel.Error) 
-                .CreateLogger();
+// var _logger = new LoggerConfiguration()
+//                 .MinimumLevel.Debug()
+//                 .WriteTo.File(path: "info-logs.txt", restrictedToMinimumLevel: LogEventLevel.Information)
+//                 .WriteTo.File(path: "error-logs.txt", restrictedToMinimumLevel: LogEventLevel.Error) 
+//                 .CreateLogger();
 
-builder.Logging.AddSerilog(_logger);
+// builder.Logging.AddSerilog(_logger);
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
