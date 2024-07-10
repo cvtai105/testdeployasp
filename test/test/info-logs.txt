@@ -1,0 +1,47 @@
+2024-07-10 15:34:26.837 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-07-10 15:34:26.855 +07:00 [INF] User profile is available. Using 'C:\Users\cvtai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-10 15:34:26.926 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.ObjectPool.ObjectPool`1[Microsoft.AspNetCore.HttpLogging.HttpLoggingInterceptorContext]' while attempting to activate 'Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-07-10 15:34:26.927 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.Extensions.ObjectPool.ObjectPool`1[Microsoft.AspNetCore.HttpLogging.HttpLoggingInterceptorContext]' while attempting to activate 'Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-07-10 15:34:47.843 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-07-10 15:34:47.858 +07:00 [INF] User profile is available. Using 'C:\Users\cvtai\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-10 15:34:47.907 +07:00 [INF] Now listening on: http://localhost:5234
+2024-07-10 15:34:47.908 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-10 15:34:47.908 +07:00 [INF] Hosting environment: Development
+2024-07-10 15:34:47.908 +07:00 [INF] Content root path: C:\Users\cvtai\OneDrive\Desktop\test
+2024-07-10 15:34:48.241 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger - null null
+2024-07-10 15:34:48.312 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger - 301 0 null 73.7078ms
+2024-07-10 15:34:48.317 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/index.html - null null
+2024-07-10 15:34:48.368 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/index.html - 200 null text/html;charset=utf-8 51.309ms
+2024-07-10 15:34:48.381 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - null null
+2024-07-10 15:34:48.382 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-10 15:34:48.382 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - null null
+2024-07-10 15:34:48.382 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - null null
+2024-07-10 15:34:48.383 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.0825ms
+2024-07-10 15:34:48.396 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-07-10 15:34:48.396 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-07-10 15:34:48.398 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 15.8011ms
+2024-07-10 15:34:48.398 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui.css - 200 152034 text/css 16.7848ms
+2024-07-10 15:34:48.404 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-07-10 15:34:48.404 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 22.3998ms
+2024-07-10 15:34:48.669 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - null null
+2024-07-10 15:34:48.686 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - null null
+2024-07-10 15:34:48.686 +07:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-07-10 15:34:48.686 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/favicon-32x32.png - 200 628 image/png 0.5166ms
+2024-07-10 15:34:48.689 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5234/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.6678ms
+2024-07-10 15:36:11.449 +07:00 [INF] Application is shutting down...
